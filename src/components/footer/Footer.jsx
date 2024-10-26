@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (
-        <footer className="footer bg-[#06091A] text-white p-10">
+        <footer className="relative footer bg-[#06091A] text-white p-10">
   
     
     <div>
@@ -38,7 +38,13 @@ const Footer = () => {
       </div>
     </fieldset>
   </form>
+  <div className="absolute bottom-0 left-0 w-full border-t border-red-600"></div>
+  <h1 className="flex justify-start">@2024 Your Company All Rights Reserved.</h1>
 </footer>
+
+
+
+ 
     );
 };
 
