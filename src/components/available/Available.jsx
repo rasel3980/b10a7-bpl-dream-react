@@ -2,7 +2,7 @@
 const Available = () => {
     return (
         <div>
-            <h1>Available</h1>
+            {/* <h1>Available</h1> */}
         </div>
     );
 };

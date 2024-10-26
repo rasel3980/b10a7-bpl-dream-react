@@ -1,7 +1,10 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-undef */
 import { useEffect, useState } from "react";
 import Player from "../player/Player";
+import CartContainer from "../cartContainer/CartContainer";
 
-const Players = ({handleChoosePlayer}) => {
+const Players = ({handleChoosePlayer,choosePlayer,isActive}) => {
 
     const [players,setPlayers] = useState([])
 
@@ -11,12 +14,29 @@ const Players = ({handleChoosePlayer}) => {
         .then(data => setPlayers(data))
     },[])
 
-
+const handleIsActiveState = (status) => {
+    if (status == "Available") {
+      setIsActive({
+        cart: true,
+        status: "Available",
+      });
+    } else {
+      setIsActive({
+        cart: false,
+        status: "Selected",
+      });
+    }
+  };
 
     return (
         <div className="w-11/12 mx-auto">
-            <div>
+            <div className="flex justify-between py-3">
             <h1 className="text-3xl font-bold">Available Players</h1>
+            <CartContainer
+        choosePlayer={choosePlayer}
+          isActive={isActive}
+          handleIsActiveState={handleIsActiveState}
+        ></CartContainer>
             </div>
             <div className="grid grid-cols-3 gap-4">
             
