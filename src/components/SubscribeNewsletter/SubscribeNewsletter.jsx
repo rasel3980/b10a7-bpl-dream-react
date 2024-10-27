@@ -1,7 +1,12 @@
 import assets from '../../../assets/bg-shadow.png'
+
 const SubscribeNewsletter = () => {
     return (
-        <section style={{ backgroundImage: `url(${assets})` }} className="py-12 px-10 md:px-0 text-center mx-auto">
+       <div className="relative -top-36  w-8/12 mx-auto p-2 rounded-xl border-2 border-white">
+         <section 
+            style={{ backgroundImage: `url(${assets})` }}
+            className="w-full bg-cover bg-center rounded-lg border-2 py-12 px-6 md:px-0 text-center mx-auto"
+         >
             <h2 className="text-3xl font-bold text-blue-700 mb-4">Subscribe to our Newsletter</h2>
             <p className="text-gray-600 mb-6">
                 Get the latest updates and exclusive offers directly in your inbox.
@@ -21,6 +26,7 @@ const SubscribeNewsletter = () => {
                 </button>
             </form>
         </section>
+       </div>
     );
 };
 

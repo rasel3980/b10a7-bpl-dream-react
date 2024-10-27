@@ -1,19 +1,12 @@
+/* eslint-disable react/prop-types */
 
-const Selected = ({choosePlayer}) => {
-    console.log(choosePlayer);
+const Selected = ({ choosePlayer }) => {
+    const { name, age } = choosePlayer || {}; // Destructure safely with fallback
     return (
         <div>
-            {
-               choosePlayer.map((player)=>{
-                <div>
-                    <p>h</p>
-                </div>
-               }) 
-            }
+            {/* <h1>name:{name}</h1> */}
         </div>
-          
     );
-    
 };
 
 export default Selected;

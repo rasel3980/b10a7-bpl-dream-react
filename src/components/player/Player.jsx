@@ -1,11 +1,13 @@
+/* eslint-disable react/prop-types */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFlag } from '@fortawesome/free-solid-svg-icons'
 const Player = ({player,handleChoosePlayer}) => {
+    // console.log(handleChoosePlayer)
 
-    const {id,name,age,role,country,img,rating,profile,price,style}= player;
+    const {name,role,country,img,rating,profile,price,style}= player;
     return (
         <>
-        <div className="card card-compact  shadow-xl">
+        <div className="card card-compact shadow-xl">
   <figure>
     <img 
         className='w-full h-72 object-cover'
