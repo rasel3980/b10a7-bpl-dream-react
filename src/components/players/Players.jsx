@@ -32,6 +32,7 @@ const Players = ({handleChoosePlayer,choosePlayer}) => {
       }
     };
 
+    
 
     return (
         <div className="w-11/12 mx-auto">
@@ -44,7 +45,7 @@ const Players = ({handleChoosePlayer,choosePlayer}) => {
           handleIsActiveState={handleIsActiveState}
         ></CartContainer>
             </div>
-            <div className="grid grid-cols-3 gap-4">
+            <div className={`grid grid-cols-3 gap-4 ${!isActive.cart && 'hidden'}`}>
             
             {
                 players?.map((p)=><Player handleChoosePlayer={handleChoosePlayer} key={p.id} player={p}></Player>)
@@ -53,6 +54,7 @@ const Players = ({handleChoosePlayer,choosePlayer}) => {
             
         </div>
     );
+    
 };
 
 export default Players;

@@ -5,6 +5,8 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Main from "./components/main/Main";
 import Players from "./components/players/Players";
+import { toast } from "react-toastify";
+
 function App() {
 
 const [count,setCount] = useState(0)
@@ -18,13 +20,13 @@ const handleCoinCount=()=>{
     const isExit = choosePlayer.find((p)=>p.id==player.id)
 
     if(isExit){
-      alert('sorry r add kora jabe na ')
+      toast.error('sorry r add kora jabe na ')
     }
     else{
       const newChoosePlayer = [...choosePlayer,player];
       setChoosePlayer(newChoosePlayer)
     }
-    console.log(isExit);
+    // console.log(isExit);
     
   }
   return (
