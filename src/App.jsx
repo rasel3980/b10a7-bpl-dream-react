@@ -9,20 +9,36 @@ import { toast } from "react-toastify";
 
 function App() {
 
-const [count,setCount] = useState(0)
+const [price,setPrice] = useState(0)
+
+const handleAddPrice = (p)=>{
+  setPrice(price-p)
+}
 
 const handleCoinCount=()=>{
-  setCount(prevCount => prevCount + 700000);
+  setPrice(newPrice => newPrice + 5000000);
 }
   const [choosePlayer,setChoosePlayer] = useState([]);
+
+  const handleDecreaseCoin = (id)=>{
+    const player = choosePlayer.find((plr)=>plr.id ==id)
+    setPrice(price+player.price)
+  }
+
+  const handleDelete = (id)=>{
+    handleDecreaseCoin(id)
+    const newPlayer = choosePlayer.filter((p)=>p.id !=id);
+    setChoosePlayer(newPlayer)
+  }
 
   const handleChoosePlayer =(player)=>{
     const isExit = choosePlayer.find((p)=>p.id==player.id)
 
     if(isExit){
-      toast.error('sorry r add kora jabe na ')
+      toast.error('Sorry, Already added this player')
     }
     else{
+      handleAddPrice(player.price)
       const newChoosePlayer = [...choosePlayer,player];
       setChoosePlayer(newChoosePlayer)
     }
@@ -31,12 +47,12 @@ const handleCoinCount=()=>{
   }
   return (
     <>
-      <Header count={count}></Header>
+      <Header price={price}></Header>
       <Banner handleCoinCount={handleCoinCount}></Banner>
       <Main></Main>
 
       <div className="flex justify-between w-11/12 mx-auto mt-7 pb-52">
-        <Players choosePlayer={choosePlayer} handleChoosePlayer={handleChoosePlayer}></Players>
+        <Players choosePlayer={choosePlayer} handleDelete={handleDelete} handleChoosePlayer={handleChoosePlayer}></Players>
       </div>
 
       <Footer></Footer>

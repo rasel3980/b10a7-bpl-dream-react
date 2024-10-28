@@ -3,8 +3,9 @@
 import { useEffect, useState } from "react";
 import Player from "../player/Player";
 import CartContainer from "../cartContainer/CartContainer";
+import Selected from "../Selected/Selected";
 
-const Players = ({handleChoosePlayer,choosePlayer}) => {
+const Players = ({handleChoosePlayer,choosePlayer,handleDelete}) => {
 
     const [players,setPlayers] = useState([])
 
@@ -35,9 +36,11 @@ const Players = ({handleChoosePlayer,choosePlayer}) => {
     
 
     return (
-        <div className="w-11/12 mx-auto">
+        <div className="w-full mx-auto">
             <div className="flex justify-between py-3">
-            <h1 className="text-3xl font-bold">Available Players</h1>
+              <h1 className={`text-3xl font-bold ${isActive.cart && 'hidden'}`}>Selected Players({choosePlayer.length}/6)</h1>
+            <h1 className={`text-3xl font-bold ${!isActive.cart && 'hidden'}`}>Available Players</h1>
+            <div>
             <CartContainer
         choosePlayer={choosePlayer}
           isActive={isActive}
@@ -45,6 +48,10 @@ const Players = ({handleChoosePlayer,choosePlayer}) => {
           handleIsActiveState={handleIsActiveState}
         ></CartContainer>
             </div>
+            </div>
+          <div>
+            {!isActive.cart&&<Selected handleDelete={handleDelete} choosePlayer={choosePlayer}></Selected>}
+        </div>
             <div className={`grid grid-cols-3 gap-4 ${!isActive.cart && 'hidden'}`}>
             
             {

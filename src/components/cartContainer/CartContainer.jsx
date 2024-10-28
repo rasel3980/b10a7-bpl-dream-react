@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
-import Selected from '../Selected/Selected';
 import './CartContainer.css'
-const CartContainer = ({handleIsActiveState,isActive,choosePlayer,}) => {
+const CartContainer = ({handleIsActiveState,isActive}) => {
         
     return (
         <>
@@ -15,9 +14,10 @@ const CartContainer = ({handleIsActiveState,isActive,choosePlayer,}) => {
             </div>
             
         </div>
-        <div>
+        {/* <div >
         {!isActive.cart&&<Selected choosePlayer={choosePlayer}></Selected>}
-        </div>
+        </div> */}
+        
         </>
     );
 };

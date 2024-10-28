@@ -5,19 +5,19 @@ const Footer = () => {
         <div className="relative bg-[#06091A] text-white">
             
             <div className="absolute  z-50 w-full">
-                <SubscribeNewsletter />
+                <SubscribeNewsletter/>
             </div>
 
             <div  className='flex items-center justify-center'>
                     <img className='pt-40 w-36' src={logo} alt="" />
                 </div>
-            <footer className="footer p-10  gap-6 md:flex md:justify-between relative z-10">
+            <footer className=" flex justify-around relative z-10">
                 
                 <div>
                     <h6 className="footer-title text-lg font-semibold mb-2">About Us</h6>
                     <div className='w-5/12'>
-                    <p className="text-sm ">
-                        We are a passionate team dedicated to providing the best services to our customers.
+                    <p className="text-sm w-48 text-gray-300">
+                        We are a passionate team sp dedicated to providing the best services to our customers.
                     </p>
                     </div>
                 </div>
@@ -25,7 +25,7 @@ const Footer = () => {
                 
                 <nav>
                     <h6 className="footer-title text-lg font-semibold mb-2">Quick Links</h6>
-                    <ul className="space-y-1">
+                    <ul className="space-y-1 text-gray-300">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">About</a></li>
@@ -37,7 +37,7 @@ const Footer = () => {
                 <form>
                     <h6 className="footer-title text-lg font-semibold mb-2">Subscribe</h6>
                     <fieldset className="form-control w-full max-w-xs">
-                        <p className="text-sm mb-2">Subscribe to our newsletter for the latest updates.</p>
+                        <p className="text-sm py-4 text-gray-300">Subscribe to our newsletter for the latest updates.</p>
                         <div className="flex gap-2">
                             <input
                                 type="email"

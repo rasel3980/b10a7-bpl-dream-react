@@ -2,7 +2,7 @@ import assets from '../../../assets/bg-shadow.png'
 
 const SubscribeNewsletter = () => {
     return (
-       <div className="relative -top-36  w-8/12 mx-auto p-2 rounded-xl border-2 border-white">
+       <div className="relative -top-36  w-8/12 mx-auto p-1 rounded-xl border-2 border-white">
          <section 
             style={{ backgroundImage: `url(${assets})` }}
             className="w-full bg-cover bg-center rounded-lg border-2 py-12 px-6 md:px-0 text-center mx-auto"

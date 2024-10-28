@@ -1,5 +1,5 @@
 
-const Header = ({handleCoinCount,count}) => {
+const Header = ({price}) => {
     return (
         <div className="sticky top-0 z-10 bg-white flex justify-between items-center w-11/12 mt-12 mx-auto shadow-lg">
             <div>
@@ -12,7 +12,7 @@ const Header = ({handleCoinCount,count}) => {
                 <a href="/schedules">Schedules</a>
                 <div>
                     <button className="border border-solid rounded-xl px-5 flex items-center gap-2">
-                        {count} Coin <img className="w-8" src="/assets/download.png" alt=" Coin icon" />
+                        {price} Coin <img className="w-8" src="/assets/download.png" alt=" Coin icon" />
                     </button>
                 </div>
             </div>

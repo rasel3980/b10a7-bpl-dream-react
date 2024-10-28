@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
 
-const Selected = ({ choosePlayer }) => {
+const Selected = ({choosePlayer,handleDelete}) => {
 
     return (
-        <div>
+        <div className=" grid w-full">
             {
               choosePlayer.map((player)=>(
-                <div className="mt-3 border border-red-600">
+                <div className=" flex justify-between mt-3 border rounded-xl px-4">
                     <div className="flex gap-3">
                         <img className="w-24 h-24 bg-cover rounded-xl" src={player.img} alt="" />
                         <div className="grid justify-center items-center">
@@ -15,12 +15,13 @@ const Selected = ({ choosePlayer }) => {
                         <p>{player.role}</p>
                         
                         </div>
-                        <div className="flex justify-between items-center">
+                        
+                    </div>
+                    <div className="flex justify-between items-center">
                             <div>
-                            <button className="btn">Delete</button>
+                            <button onClick={()=>handleDelete(player.id)} className="btn">Delete</button>
                             </div>
                         </div>
-                    </div>
                 </div>
               ))  
             }
