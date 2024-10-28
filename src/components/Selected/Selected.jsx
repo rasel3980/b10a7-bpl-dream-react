@@ -1,5 +1,7 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 const Selected = ({choosePlayer,handleDelete}) => {
 
@@ -19,7 +21,7 @@ const Selected = ({choosePlayer,handleDelete}) => {
                     </div>
                     <div className="flex justify-between items-center">
                             <div>
-                            <button onClick={()=>handleDelete(player.id)} className="btn">Delete</button>
+                            <button onClick={()=>handleDelete(player.id)} className="btn"><FontAwesomeIcon icon={faTrash}/></button>
                             </div>
                         </div>
                 </div>

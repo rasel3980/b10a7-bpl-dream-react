@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import './CartContainer.css'
-const CartContainer = ({handleIsActiveState,isActive}) => {
+const CartContainer = ({handleIsActiveState,isActive,choosePlayer}) => {
         
     return (
         <>
@@ -10,14 +10,10 @@ const CartContainer = ({handleIsActiveState,isActive}) => {
                 <button>Available</button>
             </div>
             <div onClick={()=>handleIsActiveState("Selected")} className={`${isActive.cart?"btn":"active btn"}`}>
-                <button>Selected</button>
+                <button>Selected({choosePlayer.length})</button>
             </div>
             
         </div>
-        {/* <div >
-        {!isActive.cart&&<Selected choosePlayer={choosePlayer}></Selected>}
-        </div> */}
-        
         </>
     );
 };
