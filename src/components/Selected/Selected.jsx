@@ -3,7 +3,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
-const Selected = ({choosePlayer,handleDelete}) => {
+const Selected = ({choosePlayer,handleDelete,isActive,handleIsActiveState}) => {
 
     return (
         <div className=" grid w-full">
@@ -25,8 +25,14 @@ const Selected = ({choosePlayer,handleDelete}) => {
                             </div>
                         </div>
                 </div>
+                
               ))  
             }
+            <div className='mt-4'>
+            <div onClick={()=>handleIsActiveState("Add More Players")}>
+                <button className={`${isActive.cart?"btn":"btn active"}`}>Add More Players</button>
+            </div>
+            </div>
         </div>
     );
 };

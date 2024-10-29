@@ -19,18 +19,12 @@ const Players = ({handleChoosePlayer,choosePlayer,handleDelete}) => {
       cart: true,
       status: "Available",
     },[]);
+
     const handleIsActiveState = (status) => {
-      if (status == "Available") {
-        setIsActive({
-          cart: true,
-          status: "Available",
-        });
-      } else {
-        setIsActive({
-          cart: false,
-          status: "Selected",
-        });
-      }
+      setIsActive({
+        cart: status === "Available" || status === "Add More Players",
+        status: status === "Available" ? "Available" : status === "Add More Players" ? "Add More Players" : "Selected",
+      });
     };
 
     
@@ -50,7 +44,7 @@ const Players = ({handleChoosePlayer,choosePlayer,handleDelete}) => {
             </div>
             </div>
           <div>
-            {!isActive.cart&&<Selected handleDelete={handleDelete} choosePlayer={choosePlayer}></Selected>}
+            {!isActive.cart&&<Selected isActive={isActive} handleIsActiveState={handleIsActiveState} handleDelete={handleDelete} choosePlayer={choosePlayer}></Selected>}
         </div>
             <div className={`grid grid-cols-3 gap-4 ${!isActive.cart && 'hidden'}`}>
             
