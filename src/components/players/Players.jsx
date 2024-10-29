@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-undef */
+import propTypes from 'prop-types';
 import { useEffect, useState } from "react";
 import Player from "../player/Player";
 import CartContainer from "../cartContainer/CartContainer";
@@ -55,7 +54,12 @@ const Players = ({handleChoosePlayer,choosePlayer,handleDelete}) => {
             
         </div>
     );
-    
+
 };
 
+Players.propTypes = {
+  handleChoosePlayer: propTypes.func.isRequired,
+  choosePlayer: propTypes.array.isRequired,
+  handleDelete: propTypes.func.isRequired,
+};
 export default Players;

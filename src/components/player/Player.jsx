@@ -1,8 +1,7 @@
-/* eslint-disable react/prop-types */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFlag } from '@fortawesome/free-solid-svg-icons'
+import PropTypes from 'prop-types';
 const Player = ({player,handleChoosePlayer}) => {
-    // console.log(handleChoosePlayer)
 
     const {name,role,country,img,rating,profile,price,style}= player;
     return (
@@ -51,6 +50,19 @@ const Player = ({player,handleChoosePlayer}) => {
         
         
     );
+};
+Player.propTypes = {
+    player: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        role: PropTypes.string.isRequired,
+        country: PropTypes.string.isRequired,
+        img: PropTypes.string.isRequired,
+        rating: PropTypes.number.isRequired,
+        profile: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired,
+        style: PropTypes.string.isRequired,
+    }).isRequired,
+    handleChoosePlayer: PropTypes.func.isRequired,
 };
 
 export default Player;

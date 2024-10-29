@@ -1,7 +1,6 @@
-/* eslint-disable react/prop-types */
 import './CartContainer.css'
+import PropTypes from 'prop-types';
 const CartContainer = ({handleIsActiveState,isActive,choosePlayer}) => {
-        
     return (
         <>
         
@@ -17,5 +16,20 @@ const CartContainer = ({handleIsActiveState,isActive,choosePlayer}) => {
         </>
     );
 };
+CartContainer.propTypes = {
+    handleIsActiveState: PropTypes.func.isRequired,
+    isActive: PropTypes.shape({
+        cart: PropTypes.bool.isRequired,
+        status: PropTypes.string.isRequired,
+    }).isRequired,
+    choosePlayer: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            // Add additional player properties here as necessary
+        })
+    ).isRequired,
+};
+
 
 export default CartContainer;

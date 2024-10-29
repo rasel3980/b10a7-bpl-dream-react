@@ -1,6 +1,6 @@
 import logoImg from '../../../assets/logo.png';
 import coinLogo from '../../../assets/download.png';
-
+import PropTypes from 'prop-types';
 const Header = ({price}) => {
     return (
         <div className="sticky top-0 z-10 bg-white flex justify-between items-center w-11/12 mt-12 mx-auto shadow-lg">
@@ -21,5 +21,7 @@ const Header = ({price}) => {
         </div>
     );
 };
-
+Header.propTypes = {
+    price: PropTypes.number.isRequired,
+};
 export default Header;

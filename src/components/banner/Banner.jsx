@@ -1,5 +1,6 @@
 import assets from '/assets/bg-shadow.png'
 import bannerImg from '../../../assets/banner-main.png'
+import PropTypes from 'prop-types';
 const Banner = ({handleCoinCount}) => {
     return (
         <div style={{ backgroundImage: `url(${assets})` }} className="bg-cover bg-center h-screen bg-black w-11/12 mx-auto text-white mt-8 rounded-xl">
@@ -14,5 +15,7 @@ const Banner = ({handleCoinCount}) => {
         </div>
     );
 };
- 
+Banner.propTypes = {
+    handleCoinCount: PropTypes.func.isRequired,
+};
 export default Banner;
