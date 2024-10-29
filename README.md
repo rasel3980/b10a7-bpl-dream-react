@@ -21,4 +21,4 @@ This project uses these technologies to build a modern, responsive, and interact
 3. **Responsive Layout and Styling**:
    With Tailwind CSS, the application is fully responsive, adapting to all screen sizes for an optimal user experience.
 ### [Projects Live Link]
-BPL Dream Team: **https://effortless-licorice-ea8200.netlify.app/**
+BPL Dream Team: **https://glittering-lebkuchen-427bd8.netlify.app/**

@@ -46,9 +46,7 @@ const Player = ({player,handleChoosePlayer}) => {
     
   </div>
 </div>
-        </>
-        
-        
+        </> 
     );
 };
 Player.propTypes = {

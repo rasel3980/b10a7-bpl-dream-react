@@ -26,7 +26,6 @@ CartContainer.propTypes = {
         PropTypes.shape({
             id: PropTypes.string.isRequired,
             name: PropTypes.string.isRequired,
-            // Add additional player properties here as necessary
         })
     ).isRequired,
 };

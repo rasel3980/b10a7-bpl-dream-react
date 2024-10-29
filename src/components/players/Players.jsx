@@ -25,9 +25,6 @@ const Players = ({handleChoosePlayer,choosePlayer,handleDelete}) => {
         status: status === "Available" ? "Available" : status === "Add More Players" ? "Add More Players" : "Selected",
       });
     };
-
-    
-
     return (
         <div className="w-full mx-auto">
             <div className="flex justify-between py-3">

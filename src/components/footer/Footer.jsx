@@ -20,9 +20,7 @@ const Footer = () => {
                         We are a passionate team sp dedicated to providing the best services to our customers.
                     </p>
                     </div>
-                </div>
-
-                
+                </div>  
                 <nav>
                     <h6 className="footer-title text-lg font-semibold mb-2">Quick Links</h6>
                     <ul className="space-y-1 text-gray-300">
@@ -32,8 +30,6 @@ const Footer = () => {
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
-
-                
                 <form>
                     <h6 className="footer-title text-lg font-semibold mb-2">Subscribe</h6>
                     <fieldset className="form-control w-full max-w-xs">
